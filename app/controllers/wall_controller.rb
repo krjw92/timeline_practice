@@ -38,7 +38,7 @@ class WallController < ApplicationController
 		p = Post.find(params[:id])
 		p.destroy
 
-		redirect_to "wall/posts"
+		redirect_to "/wall/posts"
 	end
 
 
