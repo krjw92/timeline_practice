@@ -54,7 +54,7 @@ class WallController < ApplicationController
 		c.content = params[:content]
 		c.save
 
-		redirecto_to "/wall/posts"
+		redirect_to "/wall/posts"
 	end
 
 
