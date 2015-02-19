@@ -1,7 +1,8 @@
 Timeline::Application.routes.draw do
   get "user/signup"
 	post "user/signup_complete"
-  get "wall/write"
+  get "user/login"
+	get "wall/write"
   post "wall/write_complete"
 	get "wall/posts"
 	get "wall/edit/:id" => 'wall#edit'
