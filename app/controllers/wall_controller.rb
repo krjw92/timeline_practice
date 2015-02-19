@@ -1,4 +1,6 @@
 class WallController < ApplicationController
+	before_action :login_check
+	skip_before_action :login_check, :only => [:posts]
   def write
   end
 
