@@ -22,6 +22,9 @@ class UserController < ApplicationController
 
 
 	def login
+	end
+	
+	def login_complete
 		u = User.where(username: params[:username])[0]
 		if u.nil?
 			flash[:alert] = "Incorrect username or password."
@@ -39,7 +42,7 @@ class UserController < ApplicationController
 	end
 
 	def logout
-		cookies.delete(:userid)
+		cookies.delete(:user_id)
 		redirect_to :back
 	end
 
