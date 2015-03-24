@@ -24,6 +24,8 @@
 	<a href="/wall/write">Write post again</a>
 </div>
 
+<%= will_paginate @posts %>
+
 <% User.all.each do |user| %>
 <p><%= user.username %></p>
 <% end %>

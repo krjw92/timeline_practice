@@ -61,6 +61,10 @@ class WallController < ApplicationController
 
 
   def posts
-		@posts = Post.all
-  end
+'''	@posts = Post.all'''
+		@posts = Post.paginate(:page => params[:page], :per_page => 2)
+	end
+
+
+
 end
